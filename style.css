@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(32 ,33 ,36);
+  margin: 0;
+  text-align: center;
+}
+
+.new-document-center {
+  background-color: rgb(62, 63, 68);
+  border-radius: 20px;
+  color: white;
+  display: inline-block;
+  height: 70px;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 40vh;
+  margin-left: auto;
+  padding: 25px;
+  width: 300px;
+}
+
+.new-document-top {
+  animation: center-to-top 1s;
+  padding: 10px;
+  background-color: rgb(62, 63, 68);
+  color: white;
+  height: 30px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+@keyframes center-to-top {
+  from {
+    opacity: 0;
+    transform: translateY(-10vh);
+  }
+}
