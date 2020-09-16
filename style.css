@@ -4,12 +4,23 @@ body {
   text-align: center;
 }
 
+header div {
+  display: inline-block;
+  font-size: medium;
+}
+
+.board-size {
+  border-radius: 5px;
+  width: 5rem;
+}
+
 .new-document-center {
   background-color: rgb(62, 63, 68);
   border-radius: 20px;
+  box-shadow: 5px 5px 5px rgb(20, 20, 20);
   color: white;
   display: inline-block;
-  height: 70px;
+  height: 60px;
   text-align: center;
   font-size: 1.5em;
   margin-top: 40vh;
@@ -20,6 +31,7 @@ body {
 
 .new-document-top {
   animation: center-to-top 1s;
+  box-shadow: 0px 2px 2px rgb(20, 20, 20);
   padding: 10px;
   background-color: rgb(62, 63, 68);
   color: white;
@@ -33,4 +45,57 @@ body {
     opacity: 0;
     transform: translateY(-10vh);
   }
+}
+
+.color-palette {
+  color: white;
+  display: none;
+  height: 50px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.color {
+  box-shadow: 2px 2px 2px rgb(20, 20, 20);
+  border: black solid 1px;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.color0 {
+  background-color: black;
+}
+
+.color1 {
+  background-color: purple;
+}
+
+.color2 {
+  background-color: orange;
+}
+
+.color3 {
+  background-color: wheat;
+}
+
+.selected {
+  border: red solid 2px;
+}
+
+.pixel-board {
+  border: 1px solid black;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  margin-top: 100px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin-bottom: -3.9px;
+  width: 40px;
 }
