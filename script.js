@@ -8,12 +8,16 @@ const firstColor = document.querySelector('.color0');
 const secondColor = document.querySelector('.color1');
 const thirdColor = document.querySelector('.color2');
 const forthColor = document.querySelector('.color3');
+
+let allPixels = document.querySelectorAll('.pixel');
 generateBoard.addEventListener('click', function() {
   if (boardSize.value >= 5 && boardSize.value <= 50 && boardSize.value !== undefined) {
+    pixelBoard.innerHTML = '';
     newDocument.className = 'new-document-top';
     colorPalette.style.display = 'block';
     generatePixels(boardSize.value);
     boardSize.value = '';
+    pixelBoard.style.display = 'inline-block';
 
     firstColor.addEventListener('click', setColorPalette);
     secondColor.addEventListener('click', setColorPalette);
@@ -37,4 +41,15 @@ function setColorPalette() {
 }
 
 function generatePixels(size) {
+  pixelBoard.style.heigth = (size * 42) + 'px';
+  pixelBoard.style.width = (size * 42) + 'px';
+  
+  for (let yIndex = 1; yIndex <= size; yIndex += 1) {
+    for (let xIndex = 1; xIndex <= size; xIndex += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixelBoard.appendChild(pixel);
+    }
+  }
+  
 }
